@@ -23,6 +23,10 @@ export default defineConfig({
         href: "https://cdn-font.hyperos.mi.com/font/css?family=MiSans:100,200,300,400,500,600:Chinese_Simplify,Latin&display=swap",
       },
     ],
+    [
+      'meta',
+      { name: 'algolia-site-verification', content: '02116D6D8F200961' }
+    ]
   ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
