@@ -77,7 +77,7 @@ export default defineConfig({
       provider: "algolia",
       options: {
         appId: "R0W6PSVX9W",
-        apiKey: "df9b5ed790ee783af298d8afa4b9177a",
+        apiKey: "6368e34275dc1ebbcfbd79435921cf9d",
         indexName: 'bandbbswiki'
       },
     },
