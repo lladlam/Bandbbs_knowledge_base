@@ -75,12 +75,12 @@ export default defineConfig({
       },
     ],
     search: {
-      provider: "algolia",
-      options: {
-        appId: "R0W6PSVX9W",
-        apiKey: "6368e34275dc1ebbcfbd79435921cf9d",
-        indexName: 'wiki'
-      },
+      provider: "local",
+      // options: {
+      //   appId: "R0W6PSVX9W",
+      //   apiKey: "df9b5ed790ee783af298d8afa4b9177a",
+      //   indexName: 'wiki'
+      // },
     },
     editLink: {
       pattern: "https://github.com/Bandbbs/Bandbbs_knowledge_base/edit/main/src/:path"
