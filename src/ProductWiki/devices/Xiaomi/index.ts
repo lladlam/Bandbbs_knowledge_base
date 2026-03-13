@@ -9,10 +9,10 @@ export default [
         collapsed: true,
         items: [{
             text: '设备参数',
-            link: '/ProductWiki/设备/Xiaomi/device'
+            link: '/ProductWiki/devices/Xiaomi/device'
         }, {
             text: '设备命名',
-            link: '/ProductWiki/设备/Xiaomi/name'
+            link: '/ProductWiki/devices/Xiaomi/name'
         },
         ]
     }

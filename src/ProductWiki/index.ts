@@ -1,4 +1,4 @@
-import deviceIndex from './设备/index'
+import deviceIndex from './devices/index'
 
 export default [
     {

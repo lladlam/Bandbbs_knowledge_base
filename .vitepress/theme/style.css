@@ -158,3 +158,79 @@
 .dark .VPNavBarTitle .title span{
     filter: invert(1);
 }
+
+
+/* 只在桌面端做悬浮效果，移动端尽量保持原生，避免挡内容 */
+@media (min-width: 960px) {
+  /* 整个顶部导航容器 */
+  .VPNav {
+    background: transparent !important;
+  }
+
+  /* 真正的 navbar */
+  .VPNavBar {
+    position: fixed !important;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 32px);
+    max-width: 1440px;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 18px;
+
+    background: rgba(255, 255, 255, 0.65) !important;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    box-shadow:
+      0 8px 30px rgba(0, 0, 0, 0.08),
+      0 2px 8px rgba(0, 0, 0, 0.04);
+
+    transition:
+      background 0.25s ease,
+      box-shadow 0.25s ease,
+      border-color 0.25s ease;
+  }
+
+  /* 深色模式 */
+  .dark .VPNavBar {
+    background: rgba(24, 24, 27, 0.65) !important;
+    border-color: rgba(255, 255, 255, 0.08);
+    box-shadow:
+      0 8px 30px rgba(0, 0, 0, 0.32),
+      0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  /* 去掉原本那条直上直下的分割线感 */
+  .VPNavBar .divider,
+  .VPNavBar.has-sidebar .divider {
+    display: none !important;
+  }
+
+  /* 避免页面内容被浮动 navbar 压住 */
+  .VPContent,
+  .VPDoc,
+  .VPHome {
+    padding-top: 84px;
+  }
+}
+
+/* 移动端尽量只保留毛玻璃，不做悬浮宽度收缩 */
+@media (max-width: 959px) {
+  .VPNavBar {
+    background: rgba(255, 255, 255, 0.72) !important;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+  }
+
+  .dark .VPNavBar {
+    background: rgba(24, 24, 27, 0.72) !important;
+  }
+}
+
+.VPLocalNav {
+    background: transparent !important;
+    border: none !important;
+}
+
